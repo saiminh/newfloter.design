@@ -1,0 +1,69 @@
+@media (orientation: landscape) {
+	.logobar {
+		margin: 20px 20px 0 20px;
+		padding: 0 3vh;
+		font-size: 75px;
+	}
+	.logobar:before,
+	.logobar:after  {
+		top: 54px;
+	}
+	.logobar:before {
+		width: 25px;
+	}
+	.logobar:after {
+		width: auto;
+		left: 205px;
+	}
+	.navbar {
+		padding: 20px;
+		font-size: 40px;
+	}
+	.wrapper {
+		perspective: 1350px;
+	}
+	.content {
+		top: 79px;
+		margin: 0 20px 20px 20px;
+		height: calc(100vh - 90px);
+		width: calc(100vw - 40px);
+	}
+	.projectlist {
+		font-size: 3vw;
+	}
+	.projectlist h2 {
+		font-size: 1.5vw;
+	}
+
+	h1 {
+		font-size: 8.5vw;
+	}
+	h2 {
+		font-size: 4vw;
+	}
+	p {
+		font-size: 3vw;
+	}
+
+	.cols-33-66 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1vh;
+	}
+
+	.cols-33-66 * {
+		margin-top: 0;
+	}
+
+	.cols-33-66 *:first-child {
+		flex-basis: calc(33.3333% - 2vw);
+	}
+
+	.cols-33-66 *:nth-child(2) {
+		flex-basis: calc(66.6666% - 2vw);
+	}
+
+	.cols-vcenter {
+		align-items: center;
+	}
+}

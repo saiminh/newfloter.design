@@ -5,17 +5,11 @@ body_class: jpl negativeColor
 ---
 
 <!-- <figure class="hero"><img src="/img/work/jpl/jpl_logo.png"></figure> -->
-<h1 class="head">JustPeace Labs</h1>		
+<h1 class="head"><figure style="max-width: 1000px; margin-bottom: 1.5em"><img src="/img/work/jpl/jpl_logo_orange.svg"></figure>
+</h1>		
 <h2 class="subhead">Housestyle for the peace-tech startup</h2>
 
-<div class="cols-33-66 cols-vcenter">
-<figure><img src="/img/work/jpl/jpl_logo.png"></figure>			
-
 <p>The startup's mission is <em>"to empower local communities to be active participants in creating lasting just peace through the use of technology".</em> I created a logo and housestyle for them that conveyes their goals and products.</p>
-
-</div>
-
-
 
 <div class="cols-33-66">
 <img src="/img/work/jpl/jpl_sergi.jpg">

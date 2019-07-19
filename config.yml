@@ -1,0 +1,3 @@
+name: New floter.design site
+sass:
+  style: compact # possible values: nested expanded compact compressed

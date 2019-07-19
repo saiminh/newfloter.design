@@ -1,0 +1,278 @@
+---
+# This my main sass file
+---
+
+@import url("https://use.typekit.net/rqe1sku.css");
+
+:root {
+	--bodyBG: #668;
+	--mainColor: #200;
+	--orbRB: rgb(172, 189, 216);
+	--orbLB: rgb(251, 178, 146);
+	--orbLT: rgb(255, 255, 255);
+	--fontMain:  chalet-london-sixty, sans-serif;
+	--fontAlt: chalet-london-oblique, sans-serif;
+	--blendMode: multiply;
+}
+
+.jpl {
+	--bodyBG: #0B3861;
+	--mainColor: #F9A870;
+	--orbRB: #0B3861;
+	--orbLB: rgb(32, 49, 76);
+	--orbLT: rgb(162, 169, 196);
+	--blendMode: lighten;
+}
+
+
+html, body, * {
+	padding: 0;
+	margin: 0;
+	font-family: var(--fontMain);
+	font-weight: 400;
+}
+body {
+	background-color: var(--bodyBG);
+	transition: background-color 1s linear;
+}
+.bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+.orb {
+	width:1px;
+	height: 1px;
+	background-color: var(--orbLT);
+	border: none;
+	border-radius: 50%;
+	position: absolute;
+	box-shadow: 0 0 50vw 50vw;
+	color: var(--orbLT);
+	left: 0;
+	top: 0;
+	transition: background-color 1s linear;
+}
+.rb {
+	color: var(--orbRB);
+	background-color: var(--orbRB);
+	left: auto;
+	right: 25vw;
+	top: auto;
+	bottom: 0;
+	opacity: 1;
+}
+.lb {
+	box-shadow: 0 0 50vw 50vw;
+	color: var(--orbLB);
+	background-color: var(--orbLB);
+	top: auto;
+	bottom: 0;
+	left: 0;
+	opacity: 1;
+}
+.lt {
+	color: var(--orbLT);
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+.navbar {
+	color: var(--mainColor);
+	position: fixed;
+	top: 0px;
+	right: 0;
+	text-align: right;
+	font-size: 18px;
+	padding: 10px;
+}
+.wrapper {
+	perspective: 400px;
+	perspective-origin: 50% 50%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	mix-blend-mode: var(--blendMode);
+}
+
+.rotater{
+	position: relative;
+	transform-origin: 50% 50%;
+	/*transform: rotateX(3deg) rotateY(6deg) translate(0, 0) scale(.95);*/
+	overflow: auto;
+	height: 100vh;
+}
+
+.content {
+	position: fixed;
+	top: 40px;
+	z-index: 2;
+	margin: 0 10px 10px 10px;
+	padding: 0;
+	box-sizing: border-box;
+	border: 5px solid;
+	border-top:0;
+	height: calc(100vh - 50px);
+	width: calc(100vw - 20px);
+	color: var(--mainColor);
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.logobar {
+	color: var(--mainColor);
+	margin: 10px 10px 0 10px;
+	padding: 0 18px;
+	font-size: 40px;
+	line-height: 1;
+	position: relative;
+	top: 0;
+	padding-left: 30px;
+}
+
+.logobar:before,
+.logobar:after {
+	position: absolute;
+	top: 26px;
+	content: '';
+	height: 5px;
+	background-color: var(--mainColor);			
+}
+
+.logobar:before {
+	width: 25px;	
+	right: calc(100% - 10px);
+	left: 0px;
+}
+.logobar:after {			
+	width: auto;
+	right: 0;
+	left: 126px;
+}
+.content_text {
+	padding: 4.5vw;
+}
+
+body.work .content_text {
+	padding: 15px;
+}
+
+.content_text > h1:first-child {
+	margin: 1em 0;
+}
+
+h1 {
+	font-size: 15vw;
+	line-height: 1.125;
+	margin: .5em 0;
+}
+h2 {
+	font-size: 10vw;
+	margin: .5em 0;
+}
+
+.subhead {
+	font-size: 3vw;
+	font-family: var(--fontAlt);
+	margin: -2em 0 4em 0;
+	position: relative;
+}
+
+.head + .subhead:before {
+	content: '';
+	width: 2em;
+	height: 5px;
+	background-color: var(--mainColor);
+	position: absolute;
+	top: -.75em;
+}
+
+.head {
+	margin: 1em 0;
+}
+
+.subhead + .head {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+p {
+	line-height: 1.3;
+	margin-bottom: 1em;
+	font-size: 8vw;
+}
+a, a:link, a:visited {
+	color: var(--mainColor);
+	text-decoration: none;
+}
+em {
+	font-family: var(--fontAlt);
+	font-style: normal;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+.has-dropshadow {
+	box-shadow: 5px 5px 0;
+}
+.dropcap {
+	float: left;
+	font-size: 4.55em;
+	line-height: 1;
+	padding-right: .05em;
+	position: relative;
+	margin-bottom: -40px;
+	margin-left: -.05em;
+}
+.projectlist {
+	background-color: var(--mainColor);
+	color: #FFF;
+	padding: 3vw;
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-bottom: 1em;
+	font-size: 8vw;
+}
+
+body.negativeColor .projectlist {
+	color: #000;
+}
+
+.projectlist a, .projectlist a:link, .projectlist a:visited {
+	color: #FFF;
+}
+
+body.negativeColor .projectlist a, body.negativeColor .projectlist a:link, body.negativeColor .projectlist a:visited {
+	color: #000;
+}
+
+.projectlist h1 {
+	margin: 0 0 .5em 0;
+}
+
+.projectlist h2 {
+	font-family: var(--fontAlt);
+	font-size: 4vw;
+	line-height: 1.2;
+	margin: 0;
+	position: relative;
+}
+
+.projectlist li {
+	line-height: 1.3;
+	padding: .3em 0;
+	list-style: none;
+	border-bottom: 2px solid;
+}
+
+
+@import
+	"landscape"
+;
