@@ -12,9 +12,41 @@ function init() {
 		tlOrbRB.progress(st / scrollLeft);
 		tlOrbLB.progress(st / scrollLeft);
 	//	tlRotate.progress(st / scrollLeft);
-		console.log(st / scrollLeft);
+	//	console.log(st / scrollLeft);
 	});
 }
+
+var toggleWork = function() {
+	if($('body').hasClass('work_toggled')){
+		$('body').removeClass('work_toggled');
+		TweenMax.to($(".rotater"), .3, {
+			scale: 1,
+		});
+		TweenMax.to($(".work_images"), .3, {
+			scale: 0.5,
+			autoAlpha: 0
+		});
+		tlRotate.play();
+	} else {
+		$('body').addClass('work_toggled');
+		tlRotate.pause();
+		TweenMax.set($(".rotater"), {
+			transformOrigin: "0 0",
+			left: 0,
+			top: 0
+		});
+		TweenMax.to($(".rotater"), .3, {
+			scale: .2,
+		});
+		TweenMax.to($(".work_images"), .3, {
+			scale: 1,
+			autoAlpha: 1
+		});
+	}
+};
+$('body.work_toggled .wrapper, .btn_show-work').on('click', function(){
+	toggleWork();
+});
 
 var $anitime = 10;
 
@@ -101,6 +133,5 @@ $(document).ready(function(){
 	swup.on('contentReplaced', init);
 
 	tlRotate.play(0).repeat(-1);
-
 	
 });

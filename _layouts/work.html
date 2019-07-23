@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>About</title>
+		<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 				crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	</head>
-	<body class="about" >
+	<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}" >
 		<div class="bg">
 			<!-- <div class="orb white"></div> -->
 			<div class="orb lt"></div>
@@ -25,19 +25,24 @@
 				<div class="content">
 					
 					<div id="swup" class="content_text">
-						<div class="cols-33-66">
-	<div>
-		<h1>About me</h1>		
-		<p>I am a multi-disciplinary Designer living in Amsterdam. I have experience in graphic and identity design, UX/UI and illustration as well as in frontend development.</p>
-		<p>I like to create work that influences culture, helps good causes and builds business value. Everything I do is driven by creativity, and a core mission of helping good companies reach their customers.</p>
-	</div>
-	<img style="max-width: 600px " src="/img/simon.png" />
-</div>
-
+						{{ content }}
+						<!-- {% if page.workimages %}
+							<div class="work_images">
+				         	 {% for item in page.workimages %}
+				         	 <figure class="work_page_figure">
+				         	   <img src="{{item.src}}" class="work_page_images" />
+				         	    {% if item.caption %}
+				         	   <figcaption class="work_page_figcaption">{{item.caption}}</figcaption>
+				         	    {% endif %}
+				         	 </figure>
+				         	 {% endfor %}
+							</div>
+						{% endif %} -->
 					</div>
 				</div>
 			</div>
 		</div>
+		
 		<script src="/js/swup.min.js"></script>  
 		<script src="/js/SwupSlideTheme.min.js"></script>
 		<script src="/js/SwupScrollPlugin.min.js"></script>

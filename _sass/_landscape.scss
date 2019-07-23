@@ -1,7 +1,7 @@
 @media (orientation: landscape) {
 	.logobar {
 		margin: 20px 20px 0 20px;
-		padding: 0 3vh;
+		padding: 0 30px;
 		font-size: 75px;
 	}
 	.logobar:before,
@@ -9,7 +9,7 @@
 		top: 54px;
 	}
 	.logobar:before {
-		width: 25px;
+		width: 26px;
 	}
 	.logobar:after {
 		width: auto;
@@ -36,30 +36,65 @@
 	}
 
 	h1 {
-		font-size: 8.5vw;
+		font-size: 7.5vw;
+		//font-size: 66px;
 	}
 	h2 {
 		font-size: 4vw;
+		font-size: 40px;
+	}
+	.subhead {
+		font-size: 6vw;
+		font-size: 40px;
 	}
 	p {
 		font-size: 3vw;
+		font-size: 25px;
+		max-width: 720px;
 	}
 
-	.cols-33-66 {
+	div[class^="block-"],
+	div[class^="cols-"] {
+		margin-bottom: 4em;
+		box-sizing: border-box;
+	}
+
+	.block-66r {
+		width: calc(66.6666% - 2vw);
+		margin-left: calc(33.3333% + 2vw);
+	}
+	.block-66l {
+		width: calc(66.6666% - 2vw);
+		margin-right: calc(33.3333% + 2vw);
+	}
+	.block-33l {
+		width: calc(33.3333% - 2vw);
+		margin-right: calc(66.6666% + 2vw);
+	}
+
+	.cols-33-66,
+	.cols-66-33 {
 		display: flex;
 		justify-content: space-between;
-		margin-top: 1vh;
 	}
 
-	.cols-33-66 * {
+	.cols-reversed {
+		flex-direction: row-reverse;
+	}
+
+	.cols-33-66 > *,
+	.cols-66-33 > * {
 		margin-top: 0;
+		align-self: flex-start;
 	}
 
-	.cols-33-66 *:first-child {
+	.cols-33-66 > *:first-child,
+	.cols-66-33 > *:nth-child(2) {
 		flex-basis: calc(33.3333% - 2vw);
 	}
 
-	.cols-33-66 *:nth-child(2) {
+	.cols-33-66 > *:nth-child(2),
+	.cols-66-33 > *:first-child {
 		flex-basis: calc(66.6666% - 2vw);
 	}
 
