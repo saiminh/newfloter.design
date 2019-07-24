@@ -5,13 +5,14 @@ function init() {
 	var contentHeight_inner = $(".content_text").height();
 	var contentHeight = $(".content").height();
 	var scrollLeft = contentHeight_inner - contentHeight;
+	//scrollLeft = 3300;
 
-	$(".content").scroll( function(){		
+	$(".contentRRRR").scroll( function(){		
 		st = $(this).scrollTop();
 		tlOrbLT.progress(st / scrollLeft);
 		tlOrbRB.progress(st / scrollLeft);
 		tlOrbLB.progress(st / scrollLeft);
-	//	tlRotate.progress(st / scrollLeft);
+		//tlRotate.progress(st / scrollLeft);
 	//	console.log(st / scrollLeft);
 	});
 }
@@ -132,6 +133,9 @@ $(document).ready(function(){
 	init();
 	swup.on('contentReplaced', init);
 
-	tlRotate.play(0).repeat(-1);
+	tlRotate.play(0).repeat(-1).timeScale(.75);
+	tlOrbLB.play(0).repeat(-1);
+	tlOrbLT.play(0).repeat(-1);
+	tlOrbRB.play(0).repeat(-1);
 	
 });

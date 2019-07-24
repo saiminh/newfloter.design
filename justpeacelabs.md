@@ -3,7 +3,7 @@ title: JustPeace Labs
 layout: work
 body_class: jpl negativeColor
 ---
-<h1 class="head"><figure style="max-width: 60vw"><img src="/img/work/jpl/jpl_logo_color.svg"></figure></h1>
+<h1 class="head"><figure style="max-width: 60vw; margin: 0 auto"><img src="/img/work/jpl/jpl_logo_color.svg"></figure></h1>
 <div class="cols-33-66">
 	<div>
 		<h2>Housestyle for the peace-tech startup</h2>
